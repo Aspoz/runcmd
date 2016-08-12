@@ -1,0 +1,36 @@
+%btn
+  border-bottom-style: solid
+  border-bottom-width: 3px
+  color: #ffffff
+  display: inline-block
+  font-family: $font-family
+  font-size: 1rem
+  font-weight: bold
+  min-width: 10rem
+  padding: 0.75rem 1.5rem
+  position: relative
+  text-align: center
+  text-decoration: none
+
+  &:hover
+    cursor: pointer
+    text-decoration: none
+
+.btn-primary
+  @extend %btn
+  background-color: $color-primary
+  border-bottom-color: darken($color-primary, 10%)
+
+  &:hover
+    background-color: darken($color-primary, 5%)
+
+.btn-secondary
+  @extend %btn
+  background-color: $color-secondary
+  border-bottom-color: darken($color-secondary, 10%)
+
+  &:hover
+    background-color: darken($color-secondary, 5%)
+
+.btn--full
+  width: 100%

@@ -1,0 +1,59 @@
+// ** Usage **
+//
+// <div class='row'>
+//   <div class='grid-1-2 grid-small-3-4 grid-large-2-3'>
+//     ...content...
+//   </div>
+// </div>
+
+
+// Variables
+$max-cols: 6
+$gutter-width: 1rem
+
+// Row
+.row
+  @include clearfix
+
+// Each column
+[class^='grid-'],
+[class*='grid-']
+  float: left
+  padding: $gutter-width
+  width: 100%
+
+// Default value for $max-cols
+// You can change it if you need more or less cols
+@mixin col($col, $max-cols: 12)
+  width: (100% / $max-cols) * $col
+
+// Generate grid
+@mixin grid($media: default)
+  @for $sum from 1 through $max-cols
+    @for $i from 1 through $sum
+      @if $media == default
+        .grid-#{$i}-#{$sum}
+          @include col($i, $sum)
+      @else
+        .grid-#{$media}-#{$i}-#{$sum}
+          @include col($i, $sum)
+
+
+// Default grid
+@include grid()
+
+// Grid for "Small"
+@include at-least($small)
+  @include grid(sm)
+
+// Grid for "Medium"
+@include at-least($medium)
+  @include grid(med)
+
+// Grid for "Large"
+@include at-least($large)
+  @include grid(lg)
+
+// Grid for "Extra Large"
+@include at-least($xlarge)
+  @include grid(xlg)

@@ -1,0 +1,42 @@
+html
+  font-size: 100%
+
+body
+  background-color: $color-background
+  color: $color-text
+  font-family: $font-family
+  line-height: 1.5
+
+.container
+  margin: 0 auto
+
+  +clearfix
+
+  +at-least($medium)
+    width: $medium
+
+  +at-least($large)
+    width: $large
+
+  +at-least($xlarge)
+    width: $xlarge
+
+  +at-least($xxlarge)
+    width: $xxlarge
+
+.content-block
+  +at-least($medium)
+    padding: 2rem 0
+
+.content-block--bg
+  background-image: url('/images/home-event-bg.jpg')
+  background-size: cover
+  background-position: center
+
+.content-block--center
+  text-align: center
+
+// .content-block--bg
+//   background-image: url('/images/block-bg.jpg')
+//   background-size: cover
+//   background-position: center

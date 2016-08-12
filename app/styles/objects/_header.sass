@@ -1,0 +1,53 @@
+.header
+  background-color: $color-white
+  border-bottom: 2px solid $color-border
+
+.logo
+  display: block
+  float: left
+  height: 6rem
+  padding: 0.5rem
+
+  img
+    display: block
+    height: 100%
+    width: auto
+
+.nav
+  float: left
+  list-style: none
+  margin-left: 1rem
+
+  li
+    float: left
+
+    a
+      color: $color-text
+      display: block
+      font-size: 1.125rem
+      font-style: italic
+      font-weight: bold
+      height: 6rem
+      line-height: 6rem
+      padding: 0 1rem
+      text-decoration: none
+
+      &:hover
+        color: $color-primary
+
+  &-btns
+    float: right
+    margin-top: 1.5rem
+
+    & > a
+      display: block
+      float: left
+      height: 3rem
+
+      & + a
+        margin-left: 1rem
+
+      & > img
+        display: block
+        height: 100%
+        width: auto
