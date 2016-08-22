@@ -64,18 +64,22 @@
       text-decoration: none
 
 .menu-icon
+  cursor: pointer
   float: right
   font-size: 1.75rem
   margin-top: 2rem
   padding-left: 3.5rem
   position: relative
 
-.menu-icon:before
-  content: ""
-  position: absolute
-  top: 0.25em
-  left: 0
-  width: 1em
-  height: 0.125em
-  border-top: 0.375em double #000
-  border-bottom: 0.125em solid #000
+  &:before
+    content: ""
+    position: absolute
+    top: 0.25em
+    left: 0
+    width: 1em
+    height: 0.125em
+    border-top: 0.375em double $color-text
+    border-bottom: 0.125em solid $color-text
+
+  &:hover:before
+    border-color: $color-green
