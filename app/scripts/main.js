@@ -13,6 +13,7 @@ function OnTransitionEnd() {
 
 var myMenu = document.querySelector(".menu");
 var oppMenu = document.querySelector(".menu-icon");
+var closeMenu = document.querySelector(".menu-close");
 myMenu.addEventListener("transitionend", OnTransitionEnd, false);
 oppMenu.addEventListener("click", toggleClassMenu, false);
-myMenu.addEventListener("click", toggleClassMenu, false);
+closeMenu.addEventListener("click", toggleClassMenu, false);
