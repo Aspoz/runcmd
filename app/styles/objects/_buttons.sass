@@ -32,5 +32,13 @@
   &:hover
     background-color: darken($color-secondary, 5%)
 
+.btn-gray
+  @extend %btn
+  background-color: $color-gray-light
+  border-bottom-color: darken($color-gray-light, 10%)
+
+  &:hover
+    background-color: darken($color-gray-light, 5%)
+
 .btn--full
   width: 100%
