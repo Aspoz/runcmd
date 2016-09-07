@@ -64,63 +64,60 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ratione repudiandae consequatur dignissimos distinctio, vitae voluptate nihil explicabo enim numquam doloremque perspiciatis quod aspernatur iusto nemo ullam minima dicta quidem.</p>
             </div>
             <div class="grid-1">
-              <form action="">
+              <form action="" method="POST">
                 <h2 class="heading--form">Persoonsgegevens</h2>
                 <div class="form-group">
-                  <input type="text" placeholder="Voorletters*">
+                  <input name="membership[voorletters]" type="text" placeholder="Voorletters*">
                 </div>
                 <div class="form-group">
-                  <input type="text" placeholder="Naam*">
+                  <input name="membership[naam]" type="text" placeholder="Naam*">
                 </div>
                 <div class="form-group">
                   <label class="form--label">Geboortedatum: *</label>
-                  <input class="datetime inline" type="number" placeholder="Dag">
-                  <input class="datetime inline" type="number" placeholder="Maand">
-                  <input class="datetime inline" type="number" placeholder="Jaar">
+                  <input name="membership[birthday][d]" class="datetime inline" type="number" placeholder="Dag">
+                  <input name="membership[birthday][m]" class="datetime inline" type="number" placeholder="Maand">
+                  <input name="membership[birthday][y]" class="datetime inline" type="number" placeholder="Jaar">
                 </div>
                 <div class="form-group">
                   <label class="form--label">Ik wil aangesproken worden als:</label>
                   <label class="form--gender" for="gender1">
-                    <input id="gender1" type="radio" name="gender">
+                    <input id="gender1" type="radio" name="membership[gender]" value="M">
                     <span class="form--gender-title">Meneer</span>
                   </label>
                   <label class="form--gender" for="gender2">
-                    <input id="gender2" type="radio" name="gender">
+                    <input id="gender2" type="radio" name="membership[gender]" value="V">
                     <span class="form--gender-title">Mevrouw</span>
                   </label>
                 </div>
                 <h2 class="heading--form">Persoonsgegevens</h2>
                 <div class="form-group form-group--street">
-                  <input class="inline" type="text" placeholder="Straat">
-                  <input class="inline" type="text" placeholder="Huisnr.">
-                  <input class="inline" type="text" placeholder="Toevoeg.">
+                  <input name="membership[straat]" class="inline" type="text" placeholder="Straat">
+                  <input name="membership[huisnummer]" class="inline" type="text" placeholder="Huisnr.">
+                  <input name="membership[toevoeging]" class="inline" type="text" placeholder="Toevoeg.">
                 </div>
                 <div class="form-group form-group--pc">
-                  <input class="inline" type="text" placeholder="Postcode">
-                  <input class="inline" type="text" placeholder="Plaatsnaam">
+                  <input name="membership[postcode]" class="inline" type="text" placeholder="Postcode">
+                  <input name="membership[plaatsnaam]" class="inline" type="text" placeholder="Plaatsnaam">
                 </div>
                 <h2 class="heading--form">Contactgegevens</h2>
                 <div class="form-group">
-                  <input type="text" placeholder="Telefoon*">
+                  <input name="membership[telefoon]" type="text" placeholder="Telefoon*">
                 </div>
                 <div class="form-group">
-                  <input type="text" placeholder="E-mail*">
+                  <input name="membership[email]" type="text" placeholder="E-mail*">
                 </div>
                 <h2 class="heading--form">Betalingsgegevens</h2>
                 <div class="form-group">
                   <p>Door ondertekening van dit formulier geeft de rekenhouder toestemming aan Studievereniging Run CMD, met incassant-ID NL42ZZZ628659510000 om doorlopend incasso-opdrachten te sturen naar uw bank om een jaarlijkse bijdrage van vijftien euro af te schrijven. Als u het niet eens bent met deze afschrijving kunt u deze laten terugboeken door binnen acht weken na aanschrijving contact op te namen met uw bank.</p>
                 </div>
                 <div class="form-group">
-                  <input type="text" placeholder="IBAN*">
+                  <input name="membership[iban]" type="text" placeholder="IBAN*">
                 </div>
                 <div class="form-group">
-                  <input type="text" placeholder="BIC">
+                  <input name="membership[ternamevan]" type="text" placeholder="Ter name van*">
                 </div>
                 <div class="form-group">
-                  <input type="text" placeholder="Ter name van*">
-                </div>
-                <div class="form-group">
-                  <input type="text" placeholder="Plaats*">
+                  <input name="membership[ibanplaats]" type="text" placeholder="Plaats*">
                 </div>
                 <div class="form-group">
                   <button type="submit" class="btn-primary">Lid worden</button>
