@@ -5,6 +5,9 @@ const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
 
+const gutil = require( 'gulp-util' );
+const ftp = require( 'vinyl-ftp' );
+
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
@@ -176,4 +179,40 @@ gulp.task('deploy', ['build'], () => {
   return gulp.src('dist')
     .pipe($.subtree())
     .pipe($.clean());
+});
+
+
+/** Configuration **/
+var user = process.env.FTP_USER;
+var password = process.env.FTP_PWD;
+var host = 'ftp.svruncmd.nl';
+var port = 21;
+var remoteFolder = '/public_html/testing';
+
+
+// helper function to build an FTP connection based on our configuration
+function getFtpConnection() {
+  return ftp.create({
+    host: host,
+    port: port,
+    user: user,
+    password: password,
+    parallel: 5,
+    log: gutil.log
+  });
+}
+
+/**
+ * Deploy task.
+ * Copies the new files to the server
+ *
+ * Usage: `FTP_USER=someuser FTP_PWD=somepwd gulp ftp-deploy`
+ */
+gulp.task('ftp-deploy', ['build'], () => {
+  var conn = getFtpConnection();
+
+  return gulp.src(['./dist/**/*','.htaccess'], { base: './dist', buffer: false })
+    .pipe( conn.newer( remoteFolder ) ) // only upload newer files
+    .pipe( conn.dest( remoteFolder ) )
+  ;
 });
