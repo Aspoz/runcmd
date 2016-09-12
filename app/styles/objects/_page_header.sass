@@ -6,25 +6,38 @@
   position: relative
 
 .banner-head
-  position: absolute
-  top: 6rem
-  left: 6rem
-
-  color: #fff
-  font-size: 6rem
-  font-weight: bold
-  text-decoration: underline
-
-.banner-context
-  position: absolute
-  bottom: 6rem
-  left: 6rem
-
   color: #fff
   font-size: 3rem
   font-weight: bold
+  text-decoration: underline
+
+  position: absolute
+  top: 2rem
+  left: 2rem
+
+  +at-least($medium)
+    top: 6rem
+    left: 6rem
+    font-size: 6rem
+
+.banner-context
+  color: #fff
+  font-size: 3rem
+  font-weight: bold
+  position: absolute
+  bottom: 14rem
+  left: 2rem
+
+  +at-least($medium)
+    bottom: 6rem
+    left: 6rem
+    font-size: 3rem
 
 .banner-action
   position: absolute
   bottom: 6rem
-  right: 6rem
+  right: 2rem
+
+  +at-least($medium)
+    bottom: 6rem
+    right: 6rem
