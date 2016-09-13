@@ -187,7 +187,7 @@ var user = process.env.FTP_USER;
 var password = process.env.FTP_PWD;
 var host = 'ftp.svruncmd.nl';
 var port = 21;
-var remoteFolder = '/public_html/testing';
+var remoteFolder = '/public_html';
 
 
 // helper function to build an FTP connection based on our configuration
