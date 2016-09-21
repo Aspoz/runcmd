@@ -2,7 +2,7 @@
 
 ## Start
 
-- do `npm install` when cloned
+- do `npm install && bower install` when cloned
 - run `gulp serve` to start it all
 
 ## Deploy
