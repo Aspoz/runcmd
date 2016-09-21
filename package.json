@@ -44,5 +44,8 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "dotenv": "^2.0.0"
   }
 }

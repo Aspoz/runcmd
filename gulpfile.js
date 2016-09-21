@@ -1,4 +1,6 @@
 // generated on 2016-08-10 using generator-webapp 2.1.0
+require('dotenv').config();
+
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
