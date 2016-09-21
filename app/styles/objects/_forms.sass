@@ -26,14 +26,23 @@ input.inline
   display: inline
 
 input.datetime
-  margin-left: 1rem
   letter-spacing: 0.25rem
   text-align: center
-  width: 8rem
+  width: 32.5%
+
+  +at-least($medium)
+    margin-left: 1rem
+    width: 8rem
 
 .form--label
+  display: block
   font-style: italic
   font-weight: bold
+  margin-bottom: 1rem
+
+  +at-least($medium)
+    display: inline-block
+    margin-bottom: 0
 
 .form--gender
   -webkit-appearance: none
@@ -45,9 +54,11 @@ input.datetime
   font-family: $font-family
   font-size: 1rem
   line-height: 1.5
-  margin-left: 1rem
   min-height: 4rem
   padding: 1rem 1.5rem
+
+  +at-least($medium)
+    margin-left: 1rem
 
 .form--gender-title
   color: $color-gray
@@ -55,7 +66,9 @@ input.datetime
 
 .form-group--street
   & input:nth-child(1)
-    width: 63.5%
+    width: 62%
+    +at-least($medium)
+      width: 63.5%
   & input:nth-child(2)
     width: 20%
   & input:nth-child(3)
@@ -63,6 +76,8 @@ input.datetime
 
 .form-group--pc
   & input:nth-child(1)
-    width: 30%
+    width: 29%
+    +at-least($medium)
+      width: 30%
   & input:nth-child(2)
     width: 69%
