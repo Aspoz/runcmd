@@ -5,3 +5,4 @@ test/bower_components
 Icon*
 dist
 .env
+.log
