@@ -53,7 +53,7 @@ $(function() {
         // This is necessary so you never see what is "behind" the navbar.
         if (st > lastScrollTop && st > navbarHeight && $('.header').hasClass('sticky')) {
             // Scroll Down
-            console.log("add class");
+            console.log('add class');
             $('.header.sticky').removeClass('nav-down').addClass('nav-up');
         } else {
             // Scroll Up
