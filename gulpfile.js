@@ -7,6 +7,7 @@ const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
 
+var ghPages = require('gulp-gh-pages');
 const gutil = require( 'gulp-util' );
 const ftp = require( 'vinyl-ftp' );
 
@@ -177,12 +178,10 @@ gulp.task('default', ['clean'], () => {
   gulp.start('build');
 });
 
-gulp.task('deploy', ['build'], () => {
-  return gulp.src('dist')
-    .pipe($.subtree())
-    .pipe($.clean());
+gulp.task('ghp-deploy', ['build'], () => {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
-
 
 /** Configuration **/
 var user = process.env.FTP_USER;
