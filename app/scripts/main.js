@@ -18,9 +18,9 @@
 	myMenu.addEventListener('transitionend', OnTransitionEnd, false);
 	oppMenu.addEventListener('click', toggleClassMenu, false);
 	closeMenu.addEventListener('click', toggleClassMenu, false);
-})
+})();
 
-$(function(){
+(function(){
 	// Hide Header on on scroll down
 	var didScroll;
 	var lastScrollTop = 0;
@@ -61,4 +61,4 @@ $(function(){
 
 		lastScrollTop = st;
 	}
-});
+})();
