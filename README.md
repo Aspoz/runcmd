@@ -9,5 +9,3 @@
 
 - Change `.env-example` to `.env` and fill out ftp login details
 - `gulp ftp-deploy` to deploy to ftp server
-
-Trolololo
